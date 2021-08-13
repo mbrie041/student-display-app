@@ -1,9 +1,13 @@
 import "./App.css";
-import { useStudentData } from "./fetch";
+import { Student } from "./components/Student";
+import { useStudentData } from "./hooks/fetch";
 
 function App() {
   const data = useStudentData();
-  return <div></div>;
+  if (typeof data.response === "object") {
+    return data.response.map((student) => <Student></Student>);
+  }
+  return <div>{data.toString()}</div>;
 }
 
 // https://api.hatchways.io/assessment/students
