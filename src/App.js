@@ -5,7 +5,9 @@ import { useStudentData } from "./hooks/fetch";
 function App() {
   const data = useStudentData();
   if (typeof data.response === "object") {
-    return data.response.map((student) => <Student></Student>);
+    return data.response.map((student) => (
+      <Student key={student.id} {...student}></Student>
+    ));
   }
   return <div>{data.toString()}</div>;
 }
