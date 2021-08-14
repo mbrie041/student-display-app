@@ -12,5 +12,4 @@ function App() {
   return <div>{data.toString()}</div>;
 }
 
-// https://api.hatchways.io/assessment/students
 export default App;

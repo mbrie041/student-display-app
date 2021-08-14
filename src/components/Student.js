@@ -1,40 +1,37 @@
+/**
+ * A function for displaying an individual students records.
+ * @param {object} props - A single students record as a complex object.
+ * @param {string} props.firstName - The students first name.
+ * @param {string} props.pic - A hyperlink to the students picture.
+ * @param {string} props.lastName - The students last name.
+ * @param {string} props.email - The students email address.
+ * @param {string} props.company - The students first name.
+ * @param {string} props.skill - The students place of employment.
+ * @param {Array} props.grades - The students grades.
+ * @returns A div displaying an individual students records with their picture or their first name.
+ */
+
 export function Student(props) {
   return (
     <div>
       <img src={props.pic} alt={props.firstName} />
       <div className="studentInfo">
-        <div className="fullName">
-          <b>
-            {props.firstName} {props.lastName}
-            {"\n"}
-          </b>
-        </div>
-        <div className="Email">
-          Email: {props.email} {"\n"}
-        </div>
-
-        <div className="Company">
-          Company: {props.company} {"\n"}
-        </div>
-        <div className="Skill">
-          Skill: {props.skill} {"\n"}
-        </div>
+        <h3 className="fullName">
+          {props.firstName} {props.lastName}
+        </h3>
+        <div className="Email">Email: {props.email}</div>
+        <div className="Company">Company: {props.company}</div>
+        <div className="Skill">Skill: {props.skill}</div>
         <div className="Average">
-          Average: {averageCalculator([props.grades])}%{"\n"}
+          Average: {averageCalculator(props.grades)}%
         </div>
       </div>
     </div>
   );
 
-  function averageCalculator([grades]) {
-    let total = 0;
-    let result = grades.map((x) => {
-      return parseInt(x, 10);
-    });
-    for (let i = 0; i < result.length; i++) {
-      total += result[i];
-    }
-    let avg = total / result.length;
+  function averageCalculator(grades) {
+    let result = grades.map((x) => parseInt(x, 10)).reduce((a, b) => a + b);
+    let avg = result / grades.length;
     return avg;
   }
 }
