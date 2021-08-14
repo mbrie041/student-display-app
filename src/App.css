@@ -1,4 +1,15 @@
 .App {
+  display: flex;
   flex-direction: column;
   text-align: center;
+}
+.student {
+  display: flex;
+}
+
+.studentPic {
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #d3d3d33b;
+  width: 128px;
+  margin: 10px;
 }

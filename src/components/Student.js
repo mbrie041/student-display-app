@@ -13,8 +13,8 @@
 
 export function Student(props) {
   return (
-    <div>
-      <img src={props.pic} alt={props.firstName} />
+    <div className="student">
+      <img className="studentPic" src={props.pic} alt={props.firstName} />
       <div className="studentInfo">
         <h3 className="fullName">
           {props.firstName} {props.lastName}
