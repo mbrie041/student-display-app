@@ -19,11 +19,13 @@ export function Student(props) {
         <h3 className="fullName">
           {props.firstName} {props.lastName}
         </h3>
-        <div className="Email">Email: {props.email}</div>
-        <div className="Company">Company: {props.company}</div>
-        <div className="Skill">Skill: {props.skill}</div>
-        <div className="Average">
-          Average: {averageCalculator(props.grades)}%
+        <div className="studentInfoBox">
+          <div className="Email">Email: {props.email}</div>
+          <div className="Company">Company: {props.company}</div>
+          <div className="Skill">Skill: {props.skill}</div>
+          <div className="Average">
+            Average: {averageCalculator(props.grades)}%
+          </div>
         </div>
       </div>
     </div>
