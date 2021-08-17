@@ -1,4 +1,5 @@
 import "./App.css";
+import "./components/Student.css";
 import { Student } from "./components/Student";
 import { useStudentData } from "./hooks/fetch";
 

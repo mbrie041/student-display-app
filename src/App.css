@@ -13,41 +13,8 @@
   box-sizing: content-box;
   overflow-y: auto;
   height: 80vh;
-  max-height: 152vh;
-  flex-direction: column;
   margin-left: 20%;
   margin-right: 20%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-.student {
-  font-family: "Raleway ", sans-serif;
-  display: flex;
-}
-
-.fullName {
-  margin-top: 2vh;
-  margin-bottom: 1vh;
-  font-size: 4vh;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.studentPic {
-  border-radius: 50%;
-  box-shadow: 0 0 0 1px #d3d3d33b;
-  width: 14vh;
-  margin-top: 4vh;
-  margin-left: 3vh;
-  margin-right: 3vh;
-  margin-bottom: 0.5vh;
-}
-
-.studentInfoBox {
-  font-family: "Raleway ", sans-serif;
-  margin-left: 20px;
-  font-weight: 100;
-  font-size: 2vh;
-  color: #7f7f7f;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
 }
