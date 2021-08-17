@@ -4,7 +4,7 @@
   overflow: hidden;
 }
 
-#root {
+.App {
   display: flex;
   box-shadow: 1px 1px 2px 2px #7978781c;
   border-radius: 8px;
@@ -17,4 +17,21 @@
   margin-right: 20%;
   margin-top: 10vh;
   margin-bottom: 10vh;
+}
+
+.searchBox {
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 1px;
+  border-color: #d3d3d33b;
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+  margin-left: 4px;
+  margin-right: 4px;
+  outline: 0;
+}
+.searchBox:focus-visible {
+  border-color: black;
+  font-weight: 300;
 }
