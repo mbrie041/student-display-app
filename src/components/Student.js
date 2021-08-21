@@ -10,14 +10,27 @@
  * @param {Array} props.grades - The students grades.
  * @returns A div displaying an individual students records with their picture or their first name.
  */
+import { useState } from "react";
+import "./Plus.js";
+import PlusSign from "./Plus.js";
+import NegativeSign from "./Negative.js";
 
 export function Student(props) {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <div className="student">
       <img className="studentPic" src={props.pic} alt={props.firstName} />
       <div className="studentInfo">
         <h3 className="fullName">
           {props.firstName} {props.lastName}
+          <button className="accordion" onClick={() => setExpanded(!expanded)}>
+            {expanded ? (
+              <NegativeSign width={10} fill={"#777"} />
+            ) : (
+              <PlusSign width={10} fill={"#777"} />
+            )}
+          </button>
         </h3>
         <div className="studentInfoBox">
           <div className="Email">Email: {props.email}</div>
@@ -26,6 +39,18 @@ export function Student(props) {
           <div className="Average">
             Average: {averageCalculator(props.grades)}%
           </div>
+          {expanded ? (
+            <table>
+              {props.grades.map((x, index) => (
+                <tr>
+                  <td>Test {index}:</td>
+                  <td>{x}%</td>
+                </tr>
+              ))}
+            </table>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>
