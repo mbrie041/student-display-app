@@ -8,6 +8,13 @@
   padding-bottom: 10px;
 }
 
+.nameAndSign {
+  display: flex;
+  flex-direction: row;
+  width: 460px;
+  justify-content: space-between;
+}
+
 .fullName {
   margin-top: 2vh;
   margin-bottom: 1vh;
@@ -33,4 +40,19 @@
   font-weight: 100;
   font-size: 10px;
   color: black;
+}
+
+.gradeTable {
+  margin-top: 8px;
+  margin-right: -3px;
+  margin-bottom: -3px;
+  margin-left: -3px;
+}
+
+.accordion {
+  border: none;
+  background: none;
+  margin-top: 8px;
+  align-content: right;
+  color: #80808059;
 }

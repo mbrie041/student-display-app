@@ -22,16 +22,18 @@ export function Student(props) {
     <div className="student">
       <img className="studentPic" src={props.pic} alt={props.firstName} />
       <div className="studentInfo">
-        <h3 className="fullName">
-          {props.firstName} {props.lastName}
+        <div className="nameAndSign">
+          <h3 className="fullName">
+            {props.firstName} {props.lastName}
+          </h3>
           <button className="accordion" onClick={() => setExpanded(!expanded)}>
             {expanded ? (
-              <NegativeSign width={10} fill={"#777"} />
+              <NegativeSign width={15} fill={"#777"} />
             ) : (
-              <PlusSign width={10} fill={"#777"} />
+              <PlusSign width={15} fill={"#777"} />
             )}
           </button>
-        </h3>
+        </div>
         <div className="studentInfoBox">
           <div className="Email">Email: {props.email}</div>
           <div className="Company">Company: {props.company}</div>
@@ -40,7 +42,7 @@ export function Student(props) {
             Average: {averageCalculator(props.grades)}%
           </div>
           {expanded ? (
-            <table>
+            <table className="gradeTable">
               {props.grades.map((x, index) => (
                 <tr>
                   <td>Test {index}:</td>
